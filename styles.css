@@ -4,6 +4,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+    background-color: yellow;
+    border: none;
+    padding: 15px;
+    margin-bottom: 2px;
+    cursor: pointer;
 }
 .grid{
     display: flex;
