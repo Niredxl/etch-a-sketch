@@ -1,0 +1,27 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 80dvh; 
+    min-width: 80dvh;
+}
+.gridrow{
+    display:flex;
+    flex: 1 1;
+    flex-direction: row;
+
+}
+.gridbox{
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    flex: 1 1;
+   
+}
