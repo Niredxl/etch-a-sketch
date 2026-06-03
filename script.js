@@ -24,8 +24,22 @@ function createGrid(gridsize){
 
     // hover effect for the boxes
     grid.addEventListener("mouseover", () => {
-                event.target.style.backgroundColor = randomizeColor();
-            });
+        const gridbox = event.target;
+        if (gridbox.style.backgroundColor == "white"){
+            gridbox.style.backgroundColor = randomizeColor();
+            gridbox.style.opacity = "0.2";
+        }
+        else{
+            let opacity = parseFloat(gridbox.style.opacity);
+            if (opacity >= 1.0){
+                return
+            }   
+            opacity += 0.2
+            gridbox.style.opacity = opacity;
+            
+        }
+
+        });
 
     // adding grid boxes to a row
     for (let i = 0; i < gridsize; i++){
