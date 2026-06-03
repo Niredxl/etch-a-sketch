@@ -1,5 +1,18 @@
 const grid = document.querySelector(".grid");
 
+function generateRandomInteger(){
+    return Math.floor(Math.random() * (255 - 0) )  + 0; 
+}
+
+function randomizeColor(){
+    let red = String(generateRandomInteger());
+    let green = String(generateRandomInteger());
+    let blue = String(generateRandomInteger());
+    return "rgb(" + red + "," + blue + "," + green + ")";
+}
+
+
+
 function createGrid(gridsize){
     
     const gridrow = document.createElement("div");
@@ -11,7 +24,7 @@ function createGrid(gridsize){
 
     // hover effect for the boxes
     grid.addEventListener("mouseover", () => {
-                event.target.style.backgroundColor = 'green';
+                event.target.style.backgroundColor = randomizeColor();
             });
 
     // adding grid boxes to a row
